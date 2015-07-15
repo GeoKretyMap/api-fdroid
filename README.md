@@ -14,7 +14,7 @@ It accept a `POST` request with two parameters:
  * `SECRET_KEY` to authenticate
  * `REPO` to indicate which branch to update.
 
-The `REPO` must be 'mainline' or 'nightly'.
+The `REPO` must be '`mainline`' or '`nightly`'.
 
 If all tests passed, the update is triggered, and response delayed until the end of the command.
 
@@ -26,7 +26,7 @@ Response are in `JSON` format.
 ```
 {
     "status": 0,
-    "message": "Command accepted"
+    "message": "Command complete."
 }
 ```
 
