@@ -1,27 +1,27 @@
 # Trigger Api for updating c:geo F-Droid mirror
 
 We maintain two branch of c:geo.
- * mainline aka `release` (stable)
- * nightly
+ * `mainline` aka `release` (stable)
+ * `nightly`
 
 
 ## The Api
 
 The Api has a single URL: `https://fdroid.cgeo.org/update-fdroid.php`
 
-It accept a POST request with two parameters:
+It accept a `POST` request with two parameters:
 
- * SECRET_KEY to authenticate
- * REPO to indicate which branch to update.
+ * `SECRET_KEY` to authenticate
+ * `REPO` to indicate which branch to update.
 
-The REPO must be 'mainline' or 'nightly'.
+The `REPO` must be 'mainline' or 'nightly'.
 
 If all tests passed, the update is triggered, and response delayed until the end of the command.
 
 
 ## Response
 
-Response are in JSON format.
+Response are in `JSON` format.
 
 ```
 {
