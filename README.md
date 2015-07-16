@@ -38,3 +38,25 @@ Other return code are as follow:
  * 4 => 'Bad REPO. Must be mainline or nightly'
  * 5 => 'Failed to update the repo.'
 
+
+## Examples
+
+```
+$ time curl -s https://fdroid.cgeo.org/update-fdroid.php -d "SECRET_KEY=good" -d "REPO=nightly" | jshon 
+{
+ "status": 0,
+ "message": "Command complete."
+}
+
+real    0m22.387s
+user    0m0.015s
+sys     0m0.030s
+```
+
+```
+$ curl -s https://fdroid.cgeo.org/update-fdroid.php -d "SECRET_KEY=bad" -d "REPO=nightly" | jshon 
+{
+ "status": 3,
+ "message": "Bad SECRET_KEY."
+}
+```
